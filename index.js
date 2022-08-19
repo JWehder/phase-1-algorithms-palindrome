@@ -1,9 +1,18 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  let decision = null;
+  let backwardsWord = word.split('').reverse().join('')
+  if (backwardsWord === word) {
+    decision = true;
+  } else {
+    decision = false;
+  }
+  return decision;
 }
 
 /* 
-  Add your pseudocode here
+  write a function that takes a string
+
 */
 
 /*
@@ -20,6 +29,12 @@ if (require.main === module) {
 
   console.log("Expecting: false");
   console.log("=>", isPalindrome("robot"));
+
+  console.log('Expecting: true')
+  console.log('=>', isPalindrome('mom'));
+
+  console.log('Expecting; false')
+  console.log('=>', isPalindrome('fantasy'))
 }
 
 module.exports = isPalindrome;
